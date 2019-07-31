@@ -1,6 +1,6 @@
 <template>
   <div class="gallery">
-    <div class="photo" v-for="slide in slides" :key="slide.id">
+    <div class="photo notification is-primary" v-for="slide in slides" :key="slide.id">
       <img :src="slide.url" :alt="slide.source_id" />
     </div>
   </div>
@@ -33,12 +33,16 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 
-  .photo img {
-    width: auto;
-    height: 300px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;
+  .photo {
+    display: flex;
+    place-items: center;
+    img {
+      width: auto;
+      height: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
   }
 }
 </style>

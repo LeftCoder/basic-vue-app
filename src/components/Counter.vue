@@ -27,7 +27,6 @@ export default {
 
 <style lang="scss" scoped>
 .counter {
-  margin-top: 30px;
   display: flex;
   place-items: center;
   .counter-window {
