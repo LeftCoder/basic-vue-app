@@ -6,7 +6,13 @@
       <SupportButton></SupportButton>
     </div>
     <Testemonials></Testemonials>
-    <Gallery></Gallery>
+    <Carousel>
+      <img src="https://placeimg.com/640/480/any" alt="">
+      <img src="https://placeimg.com/640/480/any?2" alt="">
+      <img src="https://placeimg.com/640/480/any?3" alt="">
+      <img src="https://placeimg.com/640/480/any?4" alt="">
+      <img src="https://placeimg.com/640/480/any?5" alt="">
+    </Carousel>
   </div>
 </template>
 
@@ -14,14 +20,14 @@
 import {
   Message,
   Counter,
-  Gallery,
+  Carousel,
   SupportButton,
   Testemonials
 } from "@/components";
 
 export default {
   name: "app",
-  components: { Message, Counter, Gallery, SupportButton, Testemonials },
+  components: { Message, Counter, Carousel, SupportButton, Testemonials },
   data() {
     return {};
   }

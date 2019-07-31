@@ -4,9 +4,11 @@
       <img
         v-for="(testemonial, index) in testemonials"
         :key="index"
-        @mouseover="currentTestemonial=testemonial"
+        @mouseover="updateCurrentTestemonial(testemonial)"
+        @mouseout="clearTimer"
         :src="testemonial.avatar"
         :alt="testemonial.surname"
+        :class="currentTestemonial === testemonial ? 'border-active' : 'border-transparent' "
       />
     </div>
     <div class="current-testemonial">
@@ -18,13 +20,28 @@
 </template>
 
 <script>
+import { setTimeout } from 'timers';
+
 export default {
   name: "Testemonials",
   data() {
     return {
       testemonials: [],
-      currentTestemonial: {}
+      currentTestemonial: {},
+      timer: null
     };
+  },
+
+  methods: {
+    updateCurrentTestemonial: function(testemonial) {
+      this.timer = setTimeout(() => {
+        this.currentTestemonial=testemonial;
+      }, 250);
+    },
+
+    clearTimer() {
+      clearTimeout(this.timer);
+    }
   },
 
   mounted() {
@@ -51,6 +68,16 @@ export default {
     justify-content: space-around;
     img {
       border-radius: 50%;
+      border: 2px solid transparent;
+      &:hover {
+        border: 2px solid #303030;
+      } 
+    }
+    img.border-transparent {
+      border: 2px solid transparent;
+    }
+    img.border-active {
+      border: 2px solid #303030;
     }
   }
   .current-testemonial {
