@@ -72,7 +72,7 @@ export default {
   methods: {
     contactSupport() {
       this.submitted = true;
-      setInterval(() => {
+      setTimeout(() => {
         this.closeModal();
       }, 3000);
     },
