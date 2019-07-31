@@ -5,19 +5,23 @@
       <Counter></Counter>
       <SupportButton></SupportButton>
     </div>
+    <Testemonials></Testemonials>
     <Gallery></Gallery>
   </div>
 </template>
 
 <script>
-import Message from "@/components/Message.vue";
-import Counter from "@/components/Counter.vue";
-import Gallery from "@/components/Gallery.vue";
-import SupportButton from "@/components/SupportButton.vue";
+import {
+  Message,
+  Counter,
+  Gallery,
+  SupportButton,
+  Testemonials
+} from "@/components";
 
 export default {
   name: "app",
-  components: { Message, Counter, Gallery, SupportButton },
+  components: { Message, Counter, Gallery, SupportButton, Testemonials },
   data() {
     return {};
   }
@@ -30,7 +34,8 @@ export default {
 
   .flex {
     display: flex;
-    place-items: center;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 </style>

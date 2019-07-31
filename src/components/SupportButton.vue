@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a class="button" @click="$modal.show('contact-support-modal')">Support</a>
+    <a class="button is-warning" @click="$modal.show('contact-support-modal')">Support</a>
 
     <modal width="100%" height="auto" name="contact-support-modal" :pivotY="1">
       <div>
@@ -45,7 +45,7 @@
 
           <div class="buttons is-pulled-right">
             <a class="button is-light" @click="closeModal">Cancel</a>
-            <button type="submit" class="button is-link" :disabled="submitted">Send</button>
+            <button type="submit" :class="classList" :disabled="submitted">Send</button>
           </div>
         </form>
       </div>
@@ -54,7 +54,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import Form from "@/helpers/Form";
 
 export default {
@@ -69,6 +68,13 @@ export default {
       submitted: false
     };
   },
+
+  computed: {
+    classList() {
+      return this.submitted ? "is-loading button is-link" : "button is-link";
+    }
+  },
+
   methods: {
     contactSupport() {
       this.submitted = true;

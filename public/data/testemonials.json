@@ -1,0 +1,25 @@
+{
+  "testemonials": [
+    {
+      "name": "John",
+      "surname": "Doe",
+      "date": "2019-03-13",
+      "message": "We're loving it. It's the perfect solution for our business. Keep up the excellent work. Website should be nominated for service of the year.",
+      "avatar": "https://randomuser.me/api/portraits/men/12.jpg"
+    },
+    {
+      "name": "Martin",
+      "surname": "Smith",
+      "date": "2017-06-04",
+      "message": "Website was worth a fortune to my company.",
+      "avatar": "https://randomuser.me/api/portraits/men/37.jpg"
+    },
+    {
+      "name": "Julia",
+      "surname": "Long",
+      "date": "2015-09-21",
+      "message": "Just what I was looking for. It's all good. I will let my mum know about this, she could really make use of Website!",
+      "avatar": "https://randomuser.me/api/portraits/women/57.jpg"
+    }
+  ]
+}
