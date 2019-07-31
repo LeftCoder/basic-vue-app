@@ -15,7 +15,6 @@ export default {
   },
 
   mounted() {
-    console.log(this.autoplay);
     new Flickity (this.$el, {
       autoPlay: this.autoplay,
       wrapAround: true,
